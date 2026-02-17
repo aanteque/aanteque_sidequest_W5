@@ -14,7 +14,7 @@ class WorldLevel {
   }
 
   drawBackground() {
-    background(220);
+    background(0);
   }
 
   drawWorld() {
@@ -29,25 +29,28 @@ class WorldLevel {
     noStroke();
     fill(170, 190, 210);
     for (const o of this.obstacles) rect(o.x, o.y, o.w, o.h, o.r ?? 0);
+
   }
 
   drawHUD(player, camX, camY) {
     noStroke();
-    fill(20);
-    text("Example 4 — JSON world + smooth camera (lerp).", 12, 20);
-    text(
-      "camLerp(JSON): " +
-        this.camLerp +
-        "  Player: " +
-        (player.x | 0) +
-        "," +
-        (player.y | 0) +
-        "  Cam: " +
-        (camX | 0) +
-        "," +
-        (camY | 0),
-      12,
-      40,
-    );
+    fill(250);
+    text("Sad Lonely Little Blob", 12, 20);
+    //text(
+      //"camLerp(JSON): " +
+        //this.camLerp +
+        //"  Player: " +
+        //(player.x | 0) +
+        //"," +
+        //(player.y | 0) +
+        //"  Cam: " +
+        //(camX | 0) +
+        //"," +
+        //(camY | 0),
+      //12,
+      //40,
+    //);
+    fill(0);
+
   }
 }
