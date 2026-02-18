@@ -25,7 +25,6 @@ class Player {
     const len = max(1, abs(dx) + abs(dy));
     this.x += (dx / len) * this.s;
     this.y += (dy / len) * this.s;
-
   }
 
 
@@ -46,6 +45,4 @@ class Player {
     }
     endShape(CLOSE);
   }
-  let danger = world.obstacleInteraction(player);
-
 }

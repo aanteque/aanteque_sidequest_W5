@@ -13,8 +13,13 @@ class WorldLevel {
     this.camLerp = json.camera?.lerp ?? 0.12;
   }
 
-  obstacleInteraction() {
+  obstacleInteraction(player) {
+    for (const o of this.obstacles) {
 
+      if (player.x > o.x && player.x < o.x + o.w && player.y > o.y && player.y < o.y + o.h) {
+          print("hi");
+      } 
+    }
   }
 
   drawBackground() {

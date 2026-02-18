@@ -79,6 +79,7 @@ function draw() {
   pop();
 
   level.drawHUD(player, camX, camY);
+  level.obstacleInteraction(player);
 }
 
 function keyPressed() {
