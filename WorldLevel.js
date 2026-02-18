@@ -17,8 +17,18 @@ class WorldLevel {
     for (const o of this.obstacles) {
 
       if (player.x > o.x && player.x < o.x + o.w && player.y > o.y && player.y < o.y + o.h) {
-          print("hi");
-      } 
+        player.r++;
+        player.gC--;
+        player.bC--;
+        player.s = 10;
+        player.wobbleFreq++;
+        player.wobble++;
+
+      if (player.gC <= 0 && player.bC <= 0 && player.rC > 141) {
+        player.rC -= 1; 
+      }
+
+      }
     }
   }
 
@@ -43,8 +53,10 @@ class WorldLevel {
 
   drawHUD(player, camX, camY) {
     noStroke();
+    textSize(10);
     fill(250);
-    text("Sad Lonely Little Blob - antequera wuz here", 12, 20);
+    text("Sad Lonely Little Blob - Press r to reset once the anxiety consumes you", 12, 20);
+
     //text(
       //"camLerp(JSON): " +
         //this.camLerp +
@@ -60,5 +72,13 @@ class WorldLevel {
       //40,
     //);
     fill(0);
+
+    if (player.r >= 500) {
+      fill(255, 40, 0);
+      textSize(50);
+      stroke(255, 255, 255);
+      strokeWeight(2);
+      text("you are consumed by anxiety", 80, 250);
+    }
   }
 }

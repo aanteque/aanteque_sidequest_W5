@@ -10,7 +10,13 @@ class Player {
     this.wobble = 7;
     this.points = 48;
     this.wobbleFreq = 0.9;
+
+    // colour
+    this.rC = 255;
+    this.gC = 255;
+    this.bC = 255;
   }
+
 
 
   updateInput() {
@@ -30,7 +36,7 @@ class Player {
 
   draw() {
     this.t += 0.02;
-    fill(250, 232, 236);
+    fill(player.rC, player.gC, player.bC);
     noStroke();
     beginShape();
     for (let i = 0; i < this.points; i++) {
