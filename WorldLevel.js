@@ -2,8 +2,8 @@ class WorldLevel {
   constructor(json) {
     this.schemaVersion = json.schemaVersion ?? 1;
 
-    this.w = json.world?.w ?? 2400;
-    this.h = json.world?.h ?? 1600;
+    this.w = json.world?.w ?? 1200;
+    this.h = json.world?.h ?? 800;
     this.bg = json.world?.bg ?? [235, 235, 235];
     this.gridStep = json.world?.gridStep ?? 160;
 
@@ -11,6 +11,10 @@ class WorldLevel {
 
     // NEW: camera tuning knob from JSON (data-driven)
     this.camLerp = json.camera?.lerp ?? 0.12;
+  }
+
+  obstacleInteraction() {
+
   }
 
   drawBackground() {
@@ -28,14 +32,14 @@ class WorldLevel {
 
     noStroke();
     fill(170, 190, 210);
-    for (const o of this.obstacles) rect(o.x, o.y, o.w, o.h, o.r ?? 0);
+    for (const o of this.obstacles) image(enemyIMG, o.x, o.y, o.w, o.h, o.r ?? 0);
 
   }
 
   drawHUD(player, camX, camY) {
     noStroke();
     fill(250);
-    text("Sad Lonely Little Blob", 12, 20);
+    text("Sad Lonely Little Blob - antequera wuz here", 12, 20);
     //text(
       //"camLerp(JSON): " +
         //this.camLerp +
@@ -51,6 +55,5 @@ class WorldLevel {
       //40,
     //);
     fill(0);
-
   }
 }

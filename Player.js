@@ -2,7 +2,7 @@ class Player {
   constructor(x, y, speed) {
     this.x = x;
     this.y = y;
-    this.r = 26;
+    this.r = 10;
 
     // wobble visuals
     this.t = 0;
@@ -31,7 +31,7 @@ class Player {
 
   draw() {
     this.t += 0.02;
-    fill(150);
+    fill(250, 232, 236);
     noStroke();
     beginShape();
     for (let i = 0; i < this.points; i++) {
@@ -46,4 +46,6 @@ class Player {
     }
     endShape(CLOSE);
   }
+  let danger = world.obstacleInteraction(player);
+
 }

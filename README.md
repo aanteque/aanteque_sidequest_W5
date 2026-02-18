@@ -1,6 +1,6 @@
 ## Project Title
 
-GBDA302 Side Quest 5 Sad Lonely Blob
+GBDA302 Side Quest 5 Sad Lonely Stressed Blob
 
 ---
 
@@ -12,7 +12,7 @@ Alejandra Antequera: 21073624
 
 ## Description
 
-This is a fish maze game
+This is a game about being a small little stressed, sad, and lonely blob.
 
 ---
 
@@ -26,13 +26,13 @@ This is a fish maze game
 ## Iteration Notes
 
 Post-Playtest: Three changes made based on playtesting
-- Added cooler assets
-- Added win condition
-- Added other grid type
+- Changed Colours
+- Changed Blob Appearance
+- Added an stress ball thingies
 
 Post-Showcase: Two planned improvements
-- Perhaps automated levels
-- More collectables
+- Perhaps add damage
+- Perchance add shaky screen near enemy.
 
 ---
 

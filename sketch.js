@@ -25,8 +25,13 @@ let player;
 let camX = 0;
 let camY = 0;
 
+// images
+let enemyIMG;
+
 function preload() {
   worldData = loadJSON("world.json"); // load JSON before setup [web:122]
+  
+  enemyIMG = loadImage('assets/images/ENEMY.png');
 }
 
 function setup() {
